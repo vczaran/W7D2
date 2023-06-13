@@ -8,7 +8,7 @@ def create
     @user = User.find_by_credentials(email, password)
 
     if @user
-        login(@user)
+        login!(@user)
         redirect_to user_url(@user.id)
     else
         flash.now[:errors] = ["Invalid credentials"]
@@ -23,6 +23,7 @@ end
 
 
 def destroy
+    
     if logged_in?
         logout!
     end
