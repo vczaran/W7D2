@@ -24,7 +24,7 @@ def password=(password)
     self.password_digest = BCrypt::Password.create(password)
 end
 
-def find_by_credentials(email, password)
+def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
 
     if user && user.is_password?(password)
