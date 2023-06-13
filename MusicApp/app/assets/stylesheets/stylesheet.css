@@ -33,9 +33,19 @@ h2 {
     background-color: skyblue;
     color: black;
     margin-bottom: 20px;
+    
+}
+
+.button:hover {
+    background-color: blue;
 }
 
 a {
+    display: flex;
+    justify-content: center;
+}
+
+p {
     display: flex;
     justify-content: center;
 }

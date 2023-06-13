@@ -30,7 +30,7 @@ def destroy
 
     flash[:messages] = ["You have successfully logged out!"]
     redirect_to new_session_url
-end
+    end
 
 
 end
