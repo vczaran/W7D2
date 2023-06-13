@@ -9,6 +9,12 @@
     <%= stylesheet_link_tag "application" %>
   </head>
 
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <%= error %>
+    <% end %>
+    <% end %>
+    
   <body>
     <%= yield %>
   </body>
