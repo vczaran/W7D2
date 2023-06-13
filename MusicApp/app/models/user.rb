@@ -21,7 +21,7 @@ attr_reader :password
 
 def password=(password)
     @password = password
-    self.password = BCrypt::Password.create(password)
+    self.password_digest = BCrypt::Password.create(password)
 end
 
 def find_by_credentials(email, password)

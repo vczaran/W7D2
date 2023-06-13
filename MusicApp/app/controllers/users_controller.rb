@@ -10,7 +10,7 @@ def create
 
     if @user.save
         login!(@user)
-        redirect_to user_url(@user)
+        redirect_to user_url(@user.id)
     else
         flash.now[:errors] = @user.errors.full_messages
         render :new
@@ -20,7 +20,7 @@ end
 
 
 def show
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
     render :show  
 end
 
