@@ -28,7 +28,7 @@ end
 
 
 def require_logged_out
-    redirect_to users_url if logged_in?
+    redirect_to user_url(current_user.id) if logged_in?
 end
 
 
